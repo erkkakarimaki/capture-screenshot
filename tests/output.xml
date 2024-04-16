@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.11.6 on win32)" generated="20240416 21:26:09.133" rpa="false" schemaversion="3">
+<suite id="s1" name="Test" source="c:\Users\erkka\work\Capture_screenshot\tests\test.robot">
+<kw name="Open Browser" library="QWeb" type="SETUP">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<tag>Browser</tag>
+<tag>Interaction</tag>
+<doc>Open new browser to given url.</doc>
+<msg timestamp="20240416 21:26:10.591" level="INFO">
+QWeb version number: 3.1.0</msg>
+<msg timestamp="20240416 21:26:12.096" level="INFO">Browser: chrome</msg>
+<msg timestamp="20240416 21:26:12.096" level="INFO">Browser version: 123.0.6312.106</msg>
+<msg timestamp="20240416 21:26:12.096" level="INFO">Chromedriver version: 123.0.6312.122 (31f8248cdd90acbac59f700b603fed0b5967ca50-refs/branch-heads/6312@{#824})</msg>
+<status status="PASS" starttime="20240416 21:26:10.590" endtime="20240416 21:26:12.114"/>
+</kw>
+<test id="s1-t1" name="Sample" line="8">
+<kw name="Go To" library="QWeb">
+<arg>https://google.com</arg>
+<tag>Browser</tag>
+<tag>Interaction</tag>
+<doc>Switch current page to given url.</doc>
+<status status="PASS" starttime="20240416 21:26:12.115" endtime="20240416 21:26:12.672"/>
+</kw>
+<kw name="Click Text" library="QWeb">
+<arg>Hyväksy kaikki</arg>
+<tag>Interaction</tag>
+<tag>Text</tag>
+<doc>Click text on web page.</doc>
+<status status="PASS" starttime="20240416 21:26:12.672" endtime="20240416 21:26:12.774"/>
+</kw>
+<kw name="Type Text" library="QWeb">
+<arg>q</arg>
+<arg>Copado\n</arg>
+<tag>Input</tag>
+<tag>Interaction</tag>
+<doc>Type given text to a text field.</doc>
+<status status="PASS" starttime="20240416 21:26:12.775" endtime="20240416 21:26:13.120"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240416 21:26:15.120" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240416 21:26:13.120" endtime="20240416 21:26:15.120"/>
+</kw>
+<kw name="Capture Screenshot" library="Capture">
+<arg>path=${EXECDIR}/foo.png</arg>
+<status status="PASS" starttime="20240416 21:26:15.120" endtime="20240416 21:26:15.438"/>
+</kw>
+<status status="PASS" starttime="20240416 21:26:12.115" endtime="20240416 21:26:15.438"/>
+</test>
+<kw name="Close All Browsers" library="QWeb" type="TEARDOWN">
+<tag>Browser</tag>
+<tag>Interaction</tag>
+<doc>Close all opened browsers.</doc>
+<msg timestamp="20240416 21:26:17.558" level="INFO">${BROWSER_REUSE} = False</msg>
+<status status="PASS" starttime="20240416 21:26:15.439" endtime="20240416 21:26:21.643"/>
+</kw>
+<status status="PASS" starttime="20240416 21:26:09.135" endtime="20240416 21:26:21.643"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
